@@ -2,7 +2,6 @@
   "name": "web-site-jla",
   "version": "0.1.0",
   "private": true,
-  "type":"module",
   "description": "pagina web industrial",
   "homepage": "https://github.com/francoluca35/web-site-jla#readme",
   "bugs": {
