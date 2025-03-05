@@ -1,0 +1,120 @@
+{
+    "categorias": [
+      {
+        "nombre": "Línea Calor",
+        "subcategorias": [
+          "Hornos Convetores",
+          "Hornos Pasteleros",
+          "Hornos Rotativos",
+          "Anafes",
+          "Cámaras de Fermentación",
+          "Tostadoras"
+        ]
+      },
+      {
+        "nombre": "Máquinas Industriales",
+        "subcategorias": ["Amasadoras", "Batidoras", "Divisoras", "Moldedoras"]
+      },
+      {
+        "nombre": "Artículos de Aluminio",
+        "subcategorias": ["Bandejas", "Moldes", "Utensilios"]
+      },
+      {
+        "nombre": "Artículos de Chapa Aluminizada",
+        "subcategorias": ["Mesadas", "Estanterías", "Carros de Transporte"]
+      }
+    ],
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Horno Convector Eléctrico",
+        "codigo": "530210",
+        "descripcion": "Dimensiones: 900 x 700\nCapacidad: 6 bandejas\nTipo de Combustión: Eléctrico\nMaterial: Acero inoxidable",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Línea Calor",
+        "subcategoria": "Hornos Convetores"
+      },
+      {
+        "id": 2,
+        "nombre": "Horno Pastelero a Gas",
+        "codigo": "521424",
+        "descripcion": "Dimensiones: 1050 x 815\nCapacidad: 8 bandejas\nTipo de Combustión: Gas\nMaterial: Acero inoxidable",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Línea Calor",
+        "subcategoria": "Hornos Pasteleros"
+      },
+      {
+        "id": 3,
+        "nombre": "Horno Rotativo Industrial",
+        "codigo": "540501",
+        "descripcion": "Dimensiones: 1400 x 1200\nCapacidad: 16 bandejas\nTipo de Combustión: Gas\nMaterial: Acero inoxidable",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Línea Calor",
+        "subcategoria": "Hornos Rotativos"
+      },
+      {
+        "id": 4,
+        "nombre": "Anafe Industrial a Gas",
+        "codigo": "540320",
+        "descripcion": "Dimensiones: 1200 x 600\nCantidad de quemadores: 4\nMaterial: Acero inoxidable",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Línea Calor",
+        "subcategoria": "Anafes"
+      },
+      {
+        "id": 5,
+        "nombre": "Cámara de Fermentación",
+        "codigo": "5010",
+        "descripcion": "Capacidad: 10 bandejas\nControl de humedad y temperatura\nMaterial: Acero inoxidable\nUso: Panadería y pastelería",
+        "imagen": "/assets/Catalogo/hornos-2.jpeg",
+        "categoria": "Línea Calor",
+        "subcategoria": "Cámaras de Fermentación"
+      },
+      {
+        "id": 6,
+        "nombre": "Tostadora Industrial",
+        "codigo": "550420",
+        "descripcion": "Dimensiones: 500 x 400\nCapacidad: 200 rebanadas/hora\nMaterial: Acero inoxidable",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Línea Calor",
+        "subcategoria": "Tostadoras"
+      },
+      {
+        "id": 7,
+        "nombre": "Amasadora Espiral",
+        "codigo": "600100",
+        "descripcion": "Capacidad: 25 kg\nVelocidades: 2\nMaterial: Acero inoxidable",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Máquinas Industriales",
+        "subcategoria": "Amasadoras"
+      },
+      {
+        "id": 8,
+        "nombre": "Batidora Industrial",
+        "codigo": "610200",
+        "descripcion": "Capacidad: 20 litros\nVelocidades: 3\nMaterial: Acero inoxidable",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Máquinas Industriales",
+        "subcategoria": "Batidoras"
+      },
+      {
+        "id": 9,
+        "nombre": "Molde de Aluminio para Pan",
+        "codigo": "700150",
+        "descripcion": "Dimensiones: 30 x 15 cm\nMaterial: Aluminio reforzado",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Artículos de Aluminio",
+        "subcategoria": "Moldes"
+      },
+      {
+        "id": 10,
+        "nombre": "Carro de Transporte para Bandejas",
+        "codigo": "900300",
+        "descripcion": "Capacidad: 20 bandejas\nMaterial: Chapa aluminizada",
+        "imagen": "/assets/Catalogo/horno-1.jpeg",
+        "categoria": "Artículos de Chapa Aluminizada",
+        "subcategoria": "Carros de Transporte"
+      }
+    ]
+  }
+  
