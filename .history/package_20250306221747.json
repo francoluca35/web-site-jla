@@ -2,7 +2,6 @@
   "name": "web-site-jla",
   "version": "0.1.0",
   "private": true,
-  "type":"module",
   "description": "pagina web industrial",
   "homepage": "https://github.com/francoluca35/web-site-jla#readme",
   "bugs": {
@@ -25,8 +24,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "axios": "^1.8.1",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
     "framer-motion": "^12.4.10",
     "next": "15.1.5",
     "react": "^19.0.0",
