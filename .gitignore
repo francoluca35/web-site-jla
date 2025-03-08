@@ -2,6 +2,14 @@
 
 # dependencies
 /node_modules
+node_modules
+.next
+.git
+.vscode
+.history
+.DS_Store
+.env
+
 /.pnp
 .pnp.*
 .yarn/*
@@ -19,11 +27,7 @@
 
 # production
 /build
-node_modules
-.next
-.git
-.vscode
-.history
+
 # misc
 .DS_Store
 *.pem
