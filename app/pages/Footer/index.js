@@ -37,7 +37,7 @@ export default function Footer() {
             <FaEnvelope className="text-green-400 mr-2" /> serviciotecnicojla@jlatec.com.ar
           </p>
           <p className="flex items-center justify-center lg:justify-start">
-            <FaPhoneAlt className="text-green-400 mr-2" /> +54 911 4667-6624
+            <FaPhoneAlt className="text-green-400 mr-2" /> <a href={whatsappLink} target='_blank'>+54 911 4667-6624</a> 
           </p>
           <div className="mt-4 flex justify-center lg:justify-start space-x-4">
             <a href="#" className="bg-gray-700 hover:bg-green-500 p-3 rounded-full transition-all">
