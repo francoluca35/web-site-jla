@@ -23,6 +23,7 @@ export default function Nosotros() {
           <p className="text-lg font-semibold mb-2">
             Han pasado más de 25 años. Hoy sentimos orgullo de haber ubicado a
             Pauna entre las marcas líderes del mercado.
+              
           </p>
         </div>
       </section>
