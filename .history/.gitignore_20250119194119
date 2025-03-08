@@ -19,10 +19,6 @@
 
 # production
 /build
-node_modules
-.next
-.git
-.vscode
 
 # misc
 .DS_Store
