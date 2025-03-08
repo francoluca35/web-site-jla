@@ -34,7 +34,7 @@ export default function Nosotros() {
           {/* Imagen en mobile entre el texto y el botón */}
           <div className="w-full flex justify-center md:hidden mb-4">
             <Image
-              src="/Assets/1.png"
+              src="/Assets/fondo1.jpg"
               width={500}
               height={500}
               alt="Nosotros"
