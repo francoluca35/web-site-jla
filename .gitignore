@@ -23,7 +23,7 @@ node_modules
 .next
 .git
 .vscode
-
+.history
 # misc
 .DS_Store
 *.pem
