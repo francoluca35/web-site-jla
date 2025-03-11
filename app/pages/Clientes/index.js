@@ -19,33 +19,36 @@ export default function Clientes() {
       <h2 className="uppercase bg-[#FFF6DA] py-2 text-center text-xl sm:text-2xl md:text-3xl font-semibold text-green-600">
         Algunos de nuestros clientes
       </h2>  
-      <div className="relative bg-black py-10" >
-        {/* Carrusel de logos */}  
-        <div className="flex justify-center py-6 bg-black">
-          <div className="overflow-hidden relative w-[80%]">
-            <motion.div
-              className="flex space-x-16"
-              initial={{ x: 0 }}
+
+      {/* Contenedor del carrusel con efecto de máscara en los bordes */}
+      <div className="relative bg-black py-10 overflow-hidden ">
+        <div className="w-full inline-flex flex-nowrap">
+          {/* Lista duplicada para efecto infinito */}
+          {[...Array(2)].map((_, i) => (
+            <motion.ul
+              key={i}
+              className="flex items-center justify-center md:justify-start space-x-16 animate-infinite-scroll"
+              initial={{ x: '0%' }}
               animate={{ x: '-100%' }}
               transition={{
                 ease: 'linear',
-                duration: 40, // 🔹 Movimiento lento y continuo
+                duration: 8, 
                 repeat: Infinity,
               }}
             >
-              {[...logos, ...logos].map((logo, index) => (
-                <div key={index} className="min-w-[120px] md:min-w-[180px]">
+              {logos.map((logo, index) => (
+                <li key={`${i}-${index}`} className="min-w-[120px] md:min-w-[180px]">
                   <Image
                     src={logo}
                     alt="Cliente"
-                    width={150}
-                    height={80}
+                    width={150.1}
+                    height={100}
                     className="object-contain filter grayscale opacity-75"
                   />
-                </div>
+                </li>
               ))}
-            </motion.div>
-          </div>
+            </motion.ul>
+          ))}
         </div>
       </div>
     </div>
