@@ -41,7 +41,7 @@ export default function Clientes() {
                   <Image
                     src={logo}
                     alt="Cliente"
-                    width={150}
+                    width={150.1}
                     height={100}
                     className="object-contain filter grayscale opacity-75"
                   />
