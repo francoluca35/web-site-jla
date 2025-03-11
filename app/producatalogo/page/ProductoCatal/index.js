@@ -19,7 +19,7 @@ export default function ProductosCatalogo() {
   return (
     <div className="bg-gray-100">
       {/* Encabezado con imagen de fondo */}
-      <div className="relative w-full h-64 bg-cover bg-center" style={{ backgroundImage: 'url(/assets/fondo-catalogo.jpg)' }}>
+      <div className="relative w-full h-64 bg-cover bg-center" style={{ backgroundImage: 'url(/Assets/fondo-catalogo.jpg)' }}>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl font-bold">PRODUCTOS</h1>
           <p className="text-lg mt-2">CREAMOS PRODUCTOS QUE SE CONVIERTEN EN UN STANDARD DE LA INDUSTRIA</p>
