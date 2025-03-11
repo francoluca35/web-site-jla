@@ -14,7 +14,7 @@ export default function Producto() {
 
   return (
     <div id='productos' className='bg-gray-100'>
-    <section className="flex flex-col md:flex-row items-center justify-between p-8 rounded-lg  max-w-6xl mx-auto">
+       <section className="flex flex-col md:flex-row items-center justify-between p-8 rounded-lg  max-w-6xl mx-auto">
       {/* Contenido a la izquierda en desktop */}
       <div className="w-full md:w-1/2 p-6 text-gray-800 flex flex-col justify-center">
         <h2 className=" font-bold text-green-500 text-4xl mb-4">Productos</h2>
@@ -28,7 +28,7 @@ export default function Producto() {
         {/* Imagen en mobile entre el texto y el botón */}
         <div className="w-full flex justify-center md:hidden mb-4">
           <Image
-            src="/assets/1.png" 
+            src="/Assets/1.png" 
             width={500}
             height={500}
             alt="Producto"
@@ -42,7 +42,7 @@ export default function Producto() {
       {/* Imagen a la derecha en desktop */}
       <div className="w-full md:w-1/2 hidden md:flex justify-center">
         <Image
-          src="/assets/1.png" 
+          src="/Assets/1.png" 
           width={500}
           height={500}
           alt="Producto"
