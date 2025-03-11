@@ -44,7 +44,7 @@ export default function Producto() {
         <Image
           src="/Assets/1.png" 
           width={500}
-          height={500}
+          height={501}
           alt="Producto"
           className="rounded-lg object-cover"
         />
