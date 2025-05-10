@@ -1,76 +1,81 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import axios from 'axios';
+import Image from "next/image";
+import { FaRunning, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Contacto() {
-  const [activeField, setActiveField] = useState(null);
-  const [formData, setFormData] = useState({
-    nombre: "",
-    apellido: "",
-    empresa: "",
-    email: "",
-    mensaje: "",
-  });
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-  
-    try {
-      const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/enviar-correo`, 
-        formData
-      );
-  
-      if (response.status === 200) {
-        setSuccess(true);
-        setError("");
-        setFormData({
-          nombre: "",
-          apellido: "",
-          empresa: "",
-          email: "",
-          mensaje: "",
-        });
-      } else {
-        setError("Hubo un error al enviar el mensaje");
-      }
-    } catch (err) {
-      setError("Hubo un error al enviar el mensaje");
-    } finally {
-      setLoading(false);
-    }
-  };
+  const phone = "+5491131536316";
+  const message = "Hola!, Me gustaria saber mas acerca de sus hornos.";
+  const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(
+    message
+  )}`;
 
   return (
-    <div
-      className="bg-cover bg-center min-h-screen flex items-center justify-center md:bg-[url('/Assets/contacto/fondo-contacto.png')] bg-[url('/Assets/contacto/fondo-contacto-mobile.png')]"
-      id='Contacto'
+    <section
+      className="bg-gray-900/10 py-20 px-6 md:px-12 text-center"
+      id="Contacto"
     >
-      <div className="w-full max-w-lg p-6 bg-gray-100/30 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold mb-4 text-gray-800 uppercase text-center">Envíanos tu Consulta</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input type="text" name="nombre" placeholder="Nombre y Apellido *" className="w-full p-3 border border-gray-300 rounded-lg bg-gray-200" onChange={handleChange} required />
-          <input type="text" name="empresa" placeholder="Empresa" className="w-full p-3 border border-gray-300 rounded-lg bg-gray-200" onChange={handleChange} />
-          <input type="email" name="email" placeholder="Email *" className="w-full p-3 border border-gray-300 rounded-lg bg-gray-200" onChange={handleChange} required />
-          <input type="tel" name="telefono" placeholder="N° teléfono *" className="w-full p-3 border border-gray-300 rounded-lg bg-gray-200" onChange={handleChange} required />
-          <input type="text" name="localidad" placeholder="Localidad *" className="w-full p-3 border border-gray-300 rounded-lg bg-gray-200" onChange={handleChange} required />
-          <textarea name="mensaje" placeholder="Mensaje *" className="w-full p-3 border border-gray-300 rounded-lg bg-gray-200 h-32" onChange={handleChange} required></textarea>
-          <button type="submit" className="w-full bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-700" disabled={loading}>
-            {loading ? "Enviando..." : "Enviar"}
-          </button>
-          {success && <p className="text-green-400 text-center mt-2">Mensaje enviado con éxito</p>}
-          {error && <p className="text-red-400 text-center mt-2">{error}</p>}
-        </form>
+      <div className="max-w-4xl mx-auto flex flex-col items-center">
+        <div className="w-24 h-24 mb-6 rounded-full overflow-hidden">
+          <Image
+            src="/Assets/logo.png"
+            alt="Contacto"
+            width={100}
+            height={100}
+            className="object-cover w-full h-full"
+          />
+        </div>
+
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Contactanos</h2>
+
+        <p className="text-gray-600 mb-2 text-sm max-w-md">
+          Para más información sobre nuestros trabajos podés seguirnos o
+          mandarnos un mensaje a nuestras redes sociales.
+        </p>
       </div>
-    </div>
+
+      {/* Íconos de contacto - CENTRADOS */}
+      <div className="flex flex-wrap justify-center gap-12 mt-16">
+        {/* Item 1 */}
+        <div className="flex flex-col items-center w-[240px]">
+          <div className="w-20 h-20 rounded-full bg-green-500 text-white flex items-center justify-center mb-4 text-3xl">
+            <FaRunning />
+          </div>
+          <h3 className="font-bold text-gray-900 text-lg mb-1">
+            REDES SOCIALES
+          </h3>
+          <p className="text-gray-600  text-sm">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              className="hover:text-gray-800"
+            >
+              WhatsApp
+            </a>
+            <br />
+            <a
+              href="https://www.instagram.com/jlaservice?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              className="hover:text-gray-800"
+            >
+              Instagram
+            </a>
+          </p>
+        </div>
+
+        {/* Item 2 */}
+        <div className="flex flex-col items-center w-[240px]">
+          <div className="w-20 h-20 rounded-full bg-green-500 text-white flex items-center justify-center mb-4 text-3xl">
+            <FaMapMarkerAlt />
+          </div>
+          <h3 className="font-bold text-gray-900 text-lg mb-1">UBICACIÓN</h3>
+          <p className="text-gray-600 text-sm">
+            Taller de Producción
+            <br />
+            Merlo, Buenos Aires, Argentina
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }

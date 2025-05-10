@@ -1,23 +1,22 @@
-'use client'
-import React, { useState, useEffect } from 'react';
-import '../../../globals.css';
-import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import Image from 'next/image';
+"use client";
+import React, { useState, useEffect } from "react";
+import "../../../globals.css";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import Image from "next/image";
 
 const images = [
-  '/Assets/fondo1.jpg',
-  '/Assets/fondo2.jpg',
-  '/Assets/fondo3.jpeg',
-  '/Assets/fondo4.jpg',
+  "/Assets/fondo1.jpg",
+  "/Assets/fondo2.jpg",
+  "/Assets/fondo3.jpeg",
 ];
 
 const Inicio = () => {
   const [text] = useTypewriter({
     words: [
-      'JLA EQUIPAMIENTOS GASTRONOMICOS',
+      "JLA EQUIPAMIENTOS GASTRONOMICOS",
       "Potencia tu cocina con tecnología de Calidad.",
-      'Soluciones gastronómicas que marcan la diferencia.',
-      'Hacemos que tu cocina trabaje por ti.'
+      "Soluciones gastronómicas que marcan la diferencia.",
+      "Hacemos que tu cocina trabaje por ti.",
     ],
     loop: true,
     delaySpeed: 3000,
@@ -33,10 +32,11 @@ const Inicio = () => {
     return () => clearInterval(interval);
   }, []);
 
-
-
   return (
-    <div id='inicio' className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden">
+    <div
+      id="inicio"
+      className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden"
+    >
       {/* Carrusel de imágenes */}
       <div className="absolute top-0 left-0 w-full h-full">
         {images.map((src, index) => (
@@ -46,7 +46,9 @@ const Inicio = () => {
             alt={`Slide ${index + 1}`}
             layout="fill"
             objectFit="cover"
-            className={`absolute transition-opacity duration-1000 ${index === currentImage ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute transition-opacity duration-1000 ${
+              index === currentImage ? "opacity-100" : "opacity-0"
+            }`}
           />
         ))}
       </div>
@@ -58,11 +60,11 @@ const Inicio = () => {
           <Cursor cursorStyle="|" />
         </h1>
         <p className="text-lg lg:text-xl mb-6 drop-shadow-lg xl:text-left xl:w-[820px] md:w-full md:text-center sm:text-center sm:w-full">
-          Acompañamos a los profesionales, comercios e industrias a cumplir sus objetivos con éxito, desde sus inicios y durante todo el desarrollo de su negocio.
+          Acompañamos a los profesionales, comercios e industrias a cumplir sus
+          objetivos con éxito, desde sus inicios y durante todo el desarrollo de
+          su negocio.
         </p>
       </div>
-
-
 
       {/* Filtro oscuro para mejorar el contraste */}
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
