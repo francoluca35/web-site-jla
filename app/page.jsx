@@ -18,7 +18,7 @@ export default function Home() {
         <title>JLA Técnicos - Equipamiento Gastronómico Industrial</title>
         <meta
           name="description"
-          content="Hornos industriales, panificadoras, freidoras, amasadoras y mucho más. Soluciones gastronómicas profesionales para cocinas industriales y panaderías."
+          content="JLA Tecnicos, Hornos industriales, panificadoras, freidoras, amasadoras y mucho más. Soluciones gastronómicas profesionales para cocinas industriales y panaderías."
         />
         <meta
           name="keywords"
