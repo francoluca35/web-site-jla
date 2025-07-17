@@ -37,7 +37,17 @@ const Inicio = () => {
       id="inicio"
       className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden"
     >
-      {/* Carrusel de imágenes */}
+      <div className="sr-only">
+        JLA Equipamientos Gastronómicos, hornos industriales, panificadoras
+        industriales, cocinas industriales, mantenimiento de hornos, repuestos
+        para hornos gastronómicos, servicio técnico de gastronomía, soluciones
+        para panaderías y restaurantes industriales, tecnología gastronómica
+        profesional.
+      </div>
+      <h2 className="sr-only">
+        Venta y reparación de hornos industriales y panificadoras
+      </h2>
+
       <div className="absolute top-0 left-0 w-full h-full">
         {images.map((src, index) => (
           <Image

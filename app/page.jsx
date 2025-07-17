@@ -12,17 +12,17 @@ import Footer from "./pages/Footer";
 
 export default function Home() {
   return (
-    <div >
-    <Navbar />
-    <Inicio />
-    <Nosotros />
-    <Producto />
-    <Clientes />
-    <Stecnico />
-    <Contacto />
-    <ArrowUp/>
-    <FloatBars/>
-    <Footer />
+    <div>
+      <Navbar />
+      <Inicio />
+      <Nosotros />
+      <Producto />
+      <Clientes />
+      <Stecnico />
+      <Contacto />
+      <ArrowUp />
+      <FloatBars />
+      <Footer />
     </div>
   );
 }
