@@ -50,6 +50,14 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Venta, mantenimiento y reparación de hornos industriales y panificadoras. Soluciones gastronómicas para empresas."
+        ></meta>
+        <meta
+          name="keywords"
+          content="hornos industriales, panificadoras, mantenimiento de hornos, gastronomía industrial, JLA técnicos"
+        ></meta>
         <link rel="canonical" href="https://jlatecnicos.com" />
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -59,7 +67,9 @@ export default function RootLayout({ children }) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-
+        <title>
+          Hornos Industriales y Equipamiento Gastronómico | JLA Técnicos
+        </title>
         {/* Google Analytics */}
         <script
           async
