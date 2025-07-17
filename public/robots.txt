@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Evita indexar páginas que comúnmente no se desean mostrar (ajustalo según tu sitio)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /checkout/
+Disallow: /carrito/
+
+# Sitemap para ayudar a Google a rastrear tu contenido
+Sitemap: https://jlatecnicos.com/api/sistemap
+
+# Verificación con Google Search Console
+# (opcional si ya usás el archivo HTML de verificación)
+# Googlebot
+User-agent: Googlebot
+Allow: /

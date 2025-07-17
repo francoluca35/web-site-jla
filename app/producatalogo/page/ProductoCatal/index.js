@@ -95,7 +95,7 @@ export default function ProductosCatalogo() {
             >
               <div className="w-full md:w-1/3 flex justify-center">
                 <Image
-                  src={producto.imagen}
+                  src={producto.imagen || "/Assets/Catalogo/default.jpg"}
                   width={200}
                   height={200}
                   alt={producto.nombre}
