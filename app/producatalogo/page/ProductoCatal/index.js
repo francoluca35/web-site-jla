@@ -13,6 +13,12 @@ export default function ProductosCatalogo() {
   const [modalAbierto, setModalAbierto] = useState(false);
   const [productoGaleria, setProductoGaleria] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const enviarPresupuestoPorWhatsapp = (producto) => {
+    const telefono = "541131536316"; // ← Cambiá por tu número real con código de país sin "+"
+    const mensaje = `Hola, quisiera solicitar presupuesto para el siguiente producto:\n\n *${producto.nombre}\n *Código de producción: ${producto.codigo}*\n *Descripción: ${producto.descripcion}.\n Gracias!  `;
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+  };
 
   useEffect(() => {
     const categoria = productosData.categorias.find(
@@ -127,9 +133,13 @@ export default function ProductosCatalogo() {
                   </tbody>
                 </table>
                 <div className="flex justify-end mt-4 space-x-2">
-                  <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition-all">
+                  <button
+                    onClick={() => enviarPresupuestoPorWhatsapp(producto)}
+                    className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-500 transition-all"
+                  >
                     Solicitar Presupuesto
                   </button>
+
                   {producto.galeria && (
                     <button
                       onClick={() => {
