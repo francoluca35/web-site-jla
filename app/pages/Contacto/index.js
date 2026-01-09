@@ -18,7 +18,7 @@ export default function Contacto() {
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         <div className="w-24 h-24 mb-6 rounded-full overflow-hidden">
           <Image
-            src="/Assets/logo.png"
+            src="/Assets/Logo.png"
             alt="Contacto"
             width={100}
             height={100}
