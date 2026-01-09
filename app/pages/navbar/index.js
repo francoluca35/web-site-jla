@@ -36,7 +36,7 @@ function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         {/* Logo */}
         <div className="flex items-center">
-          <Image src="/assets/logo.png" alt="Logo" width={80} height={80} />
+          <Image src="/assets/Logo.png" alt="Logo" width={80} height={80} />
         </div>
 
         {/* Botón de menú (mobile) */}
