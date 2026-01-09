@@ -27,12 +27,12 @@
       "nombre": "Horno Convector Eléctrico",
       "codigo": "HCE-530210",
       "descripcion": "Dimensiones: 648 x 427 x 800\nCapacidad: 5 bandejas\nTipo de Combustión: Eléctrico\nMaterial: Acero inoxidable",
-      "imagen": "/Assets/Catalogo/horno-convector/horno-muestra.jpg",
+      "imagen": "/assets/Catalogo/horno-convector/horno-muestra.jpg",
       "galeria": [
-        "/Assets/Catalogo/horno-convector/horno1.jpg",
-        "/Assets/Catalogo/horno-convector/horno2.jpg",
-        "/Assets/Catalogo/horno-convector/horno3.jpg",
-        "/Assets/Catalogo/horno-convector/hornos.jpg"
+        "/assets/Catalogo/horno-convector/horno1.jpg",
+        "/assets/Catalogo/horno-convector/horno2.jpg",
+        "/assets/Catalogo/horno-convector/horno3.jpg",
+        "/assets/Catalogo/horno-convector/hornos.jpg"
       ],
       "categoria": "Línea Calor",
       "subcategoria": "Hornos Convetores"
@@ -42,10 +42,10 @@
       "nombre": "Horno Espiedo Ecologico",
       "codigo": "HE-521424",
       "descripcion": "Dimensiones: 1340 x 2025\nCapacidad: 40 unidades en las espadas\nTipo de Combustión: Carbón\nMaterial: Acero inoxidable",
-      "imagen": "/Assets/Catalogo/espiedo/espiedoecologico.jpg",
+      "imagen": "/assets/Catalogo/espiedo/espiedoecologico.jpg",
       "galeria": [
-        "/Assets/Catalogo/espiedo/espiedo1.jpg",
-        "/Assets/Catalogo/espiedo/espiedo2.jpg"
+        "/assets/Catalogo/espiedo/espiedo1.jpg",
+        "/assets/Catalogo/espiedo/espiedo2.jpg"
       ],
       "categoria": "Línea Calor",
       "subcategoria": "Ecologicos"
@@ -55,9 +55,9 @@
       "nombre": "Horno Rotativo Industrial",
       "codigo": "HRI-540501",
       "descripcion": "Dimensiones: 1400 x 1200\nCapacidad: 16 bandejas\nTipo de Combustión: Gas\nMaterial: Acero inoxidable",
-      "imagen": "/Assets/Catalogo/horno-rotativo/hornorotativoindustrial.jpg",
+      "imagen": "/assets/Catalogo/horno-rotativo/hornorotativoindustrial.jpg",
       "galeria": [
-        "/Assets/Catalogo/horno-rotativo/hornorotativoindustrial.jpg"
+        "/assets/Catalogo/horno-rotativo/hornorotativoindustrial.jpg"
       ],
       "categoria": "Línea Calor",
       "subcategoria": "Hornos Rotativos"
@@ -67,8 +67,8 @@
       "nombre": "Anafe Industrial a Gas",
       "codigo": "AG-540320",
       "descripcion": "Dimensiones: 1200 x 600\nCantidad de quemadores: 4\nMaterial: Acero inoxidable",
-      "imagen": "/Assets/Catalogo/anafeIndu/AnafeIndustrialaGas.jpg",
-      "galeria": ["/Assets/Catalogo/anafeIndu/AnafeIndustrialaGas.jpg"],
+      "imagen": "/assets/Catalogo/anafeIndu/AnafeIndustrialaGas.jpg",
+      "galeria": ["/assets/Catalogo/anafeIndu/AnafeIndustrialaGas.jpg"],
       "categoria": "Línea Calor",
       "subcategoria": "Anafes"
     },
@@ -77,8 +77,8 @@
       "nombre": "Cámara de Fermentación",
       "codigo": "CF-5010",
       "descripcion": "Capacidad: 10 bandejas\nControl de humedad y temperatura: 26°C y 32°C, y humedad entre 75% y 80%\nMaterial: Acero inoxidable\nUso: Panadería y pastelería",
-      "imagen": "/Assets/Catalogo/camfermentacion/camarafermantacion.jpg",
-      "galeria": ["/Assets/Catalogo/camfermentacion/camarafermantacion.jpg"],
+      "imagen": "/assets/Catalogo/camfermentacion/camarafermantacion.jpg",
+      "galeria": ["/assets/Catalogo/camfermentacion/camarafermantacion.jpg"],
       "categoria": "Línea Calor",
       "subcategoria": "Cámaras de Fermentación"
     },
@@ -87,8 +87,8 @@
       "nombre": "Horno A Brasas",
       "codigo": "HB-700150",
       "descripcion": "Dimensiones: 1400 x 120\nMaterial: Acero inoxidable y material refractario",
-      "imagen": "/Assets/Catalogo/horno-brasas/hornoabrasas.jpg",
-      "galeria": ["/Assets/Catalogo/horno-brasas/hornoabrasas.jpg"],
+      "imagen": "/assets/Catalogo/horno-brasas/hornoabrasas.jpg",
+      "galeria": ["/assets/Catalogo/horno-brasas/hornoabrasas.jpg"],
       "categoria": "Línea Calor",
       "subcategoria": "Horno A Brasas"
     },
@@ -97,8 +97,8 @@
       "nombre": "Mesadas",
       "codigo": "M-700150",
       "descripcion": "Dimensiones: 1400 x 120\nMaterial: Acero inoxidable",
-      "imagen": "/Assets/Catalogo/bce/mesada.jpg",
-      "galeria": ["/Assets/Catalogo/bce/mesada.jpg"],
+      "imagen": "/assets/Catalogo/bce/mesada.jpg",
+      "galeria": ["/assets/Catalogo/bce/mesada.jpg"],
       "categoria": "Artículos de Acero Inoxidables",
       "subcategoria": "Mesadas"
     },
@@ -107,8 +107,8 @@
       "nombre": "Bandeja",
       "codigo": "B-230150",
       "descripcion": "Dimensiones: 540 x 120\nMaterial: Acero inoxidable ",
-      "imagen": "/Assets/Catalogo/bce/bandeja.jpg",
-      "galeria": ["/Assets/Catalogo/bce/bandeja.jpg"],
+      "imagen": "/assets/Catalogo/bce/bandeja.jpg",
+      "galeria": ["/assets/Catalogo/bce/bandeja.jpg"],
       "categoria": "Artículos de Acero Inoxidables",
       "subcategoria": "Bandejas"
     },
@@ -117,8 +117,8 @@
       "nombre": "Estantes",
       "codigo": "E-230150",
       "descripcion": "Dimensiones: 1240 x 580\nMaterial: Acero inoxidable",
-      "imagen": "/Assets/Catalogo/bce/estantes.jpg",
-      "galeria": ["/Assets/Catalogo/bce/estantes.jpg"],
+      "imagen": "/assets/Catalogo/bce/estantes.jpg",
+      "galeria": ["/assets/Catalogo/bce/estantes.jpg"],
       "categoria": "Artículos de Acero Inoxidables",
       "subcategoria": "Estanterías"
     },
@@ -127,8 +127,8 @@
       "nombre": "Carro Trasportador",
       "codigo": "CT-23031",
       "descripcion": "Dimensiones: 1240 x 580\nMaterial: Acero inoxidable ",
-      "imagen": "/Assets/Catalogo/bce/carros.jpg",
-      "galeria": ["/Assets/Catalogo/bce/carros.jpg"],
+      "imagen": "/assets/Catalogo/bce/carros.jpg",
+      "galeria": ["/assets/Catalogo/bce/carros.jpg"],
       "categoria": "Artículos de Acero Inoxidables",
       "subcategoria": "Carros de Transporte"
     }

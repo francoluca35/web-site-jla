@@ -5,9 +5,9 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Image from "next/image";
 
 const images = [
-  "/Assets/fondo1.jpg",
-  "/Assets/fondo2.jpg",
-  "/Assets/fondo3.jpeg",
+  "/assets/fondo1.jpg",
+  "/assets/fondo2.jpg",
+  "/assets/fondo3.jpeg",
 ];
 
 const Inicio = () => {

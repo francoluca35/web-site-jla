@@ -26,7 +26,7 @@ export default function FloatBars() {
           onMouseLeave={() => setHovered(null)}
         >
           <Image
-            src="/Assets/ic_catalogo.png"
+            src="/assets/ic_catalogo.png"
             width={25}
             height={30}
             alt="Catálogo"

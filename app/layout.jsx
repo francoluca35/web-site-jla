@@ -25,7 +25,7 @@ export const metadata = {
     siteName: "JLA Técnicos",
     images: [
       {
-        url: "https://jlatecnicos.com/Assets/og-banner.png",
+        url: "https://jlatecnicos.com/assets/og-banner.png",
         width: 1200,
         height: 630,
         alt: "Catálogo JLA Técnicos",
@@ -39,7 +39,7 @@ export const metadata = {
     title: "JLA Técnicos | Equipamiento Gastronómico",
     description:
       "Productos industriales para gastronomía: hornos, acero inoxidable, espiedos y más.",
-    images: ["https://jlatecnicos.com/Assets/og-banner.png"],
+    images: ["https://jlatecnicos.com/assets/og-banner.png"],
   },
 };
 
@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
               "@type": "Organization",
               name: "JLA Técnicos",
               url: "https://jlatecnicos.com",
-              logo: "https://jlatecnicos.com/Assets/logo1.png",
+              logo: "https://jlatecnicos.com/assets/logo1.png",
               sameAs: [
                 "https://www.facebook.com/jlatecnico",
                 "https://www.instagram.com/jlaservice",

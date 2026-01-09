@@ -41,7 +41,7 @@ export default function ProductosCatalogo() {
     <div className="bg-gray-100">
       <div
         className="relative w-full h-64 bg-cover bg-center"
-        style={{ backgroundImage: "url(/Assets/fondo-catalogo.jpg)" }}
+        style={{ backgroundImage: "url(/assets/fondo-catalogo.jpg)" }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
           <h1 className="text-5xl font-bold">PRODUCTOS</h1>
@@ -101,7 +101,7 @@ export default function ProductosCatalogo() {
             >
               <div className="w-full md:w-1/3 flex justify-center">
                 <Image
-                  src={producto.imagen || "/Assets/Catalogo/default.jpg"}
+                  src={producto.imagen || "/assets/Catalogo/default.jpg"}
                   width={200}
                   height={200}
                   alt={producto.nombre}

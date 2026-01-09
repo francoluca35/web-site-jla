@@ -4,13 +4,13 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const logos = [
-  "/Assets/clientes/cliente-1.png",
-  "/Assets/clientes/cliente-3.png",
-  "/Assets/clientes/cliente-4.png",
-  "/Assets/clientes/cliente-5.png",
-  "/Assets/clientes/cliente-6.png",
-  "/Assets/clientes/cliente-8.png",
-  "/Assets/clientes/cliente-7.png",
+  "/assets/clientes/cliente-1.png",
+  "/assets/clientes/cliente-3.png",
+  "/assets/clientes/cliente-4.png",
+  "/assets/clientes/cliente-5.png",
+  "/assets/clientes/cliente-6.png",
+  "/assets/clientes/cliente-8.png",
+  "/assets/clientes/cliente-7.png",
 ];
 
 export default function Clientes() {

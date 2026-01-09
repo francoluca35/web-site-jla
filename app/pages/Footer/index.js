@@ -75,7 +75,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="hidden lg:flex w-1/3 justify-center">
           <Image
-            src="/Assets/Logo.png"
+            src="/assets/Logo.png"
             alt="Logo"
             width={160}
             height={60}

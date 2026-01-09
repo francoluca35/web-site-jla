@@ -28,7 +28,7 @@ export default function Producto() {
         {/* Imagen en mobile entre el texto y el botón */}
         <div className="w-full flex justify-center md:hidden mb-4">
           <Image
-            src="/Assets/1.png" 
+            src="/assets/1.png" 
             width={500}
             height={500}
             alt="Producto"
@@ -42,7 +42,7 @@ export default function Producto() {
       {/* Imagen a la derecha en desktop */}
       <div className="w-full md:w-1/2 hidden md:flex justify-center">
         <Image
-          src="/Assets/1.png" 
+          src="/assets/1.png" 
           width={500}
           height={501}
           alt="Producto"

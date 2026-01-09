@@ -32,7 +32,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://jlatecnicos.com/Assets/imagen-seo.jpg"
+          content="https://jlatecnicos.com/assets/imagen-seo.jpg"
         />
         <meta property="og:url" content="https://jlatecnicos.com" />
       </Head>

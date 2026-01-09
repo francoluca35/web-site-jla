@@ -13,7 +13,7 @@ export default function Nosotros() {
         {/* Imagen a la izquierda en desktop */}
         <div className="w-full md:w-1/2 hidden md:flex justify-center">
           <Image
-            src="/Assets/tecnico.png"
+            src="/assets/tecnico.png"
             width={500}
             height={100}
             alt="Nosotros"
@@ -35,7 +35,7 @@ export default function Nosotros() {
           {/* Imagen en mobile entre el texto y el botón */}
           <div className="w-full flex justify-center md:hidden mb-4">
             <Image
-              src="/Assets/tecnico.png"
+              src="/assets/tecnico.png"
               width={500}
               height={500}
               alt="Nosotros"
