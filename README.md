@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+📌 README.md — Proyecto JLA Técnicos
+🧰 JLA Técnicos — Sitio Web Oficial
 
-## Getting Started
+Este repositorio contiene el código frontend del sitio web institucional de JLA Técnicos, una empresa dedicada a servicios técnicos, mantenimiento y soluciones especializadas.
 
-First, run the development server:
+El objetivo del sitio es presentar la empresa, sus servicios, valores y permitir que los clientes puedan contactarlos de manera rápida y eficaz.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+🔗 Sitio en producción: https://www.jlatecnicos.com
+
+🧠 Tecnologías utilizadas
+
+El proyecto fue desarrollado utilizando tecnologías modernas para garantizar rendimiento, responsividad y buena experiencia de usuario:
+
+✔ Next.js (App Router)
+✔ React.js
+✔ Tailwind CSS para estilos
+✔ Motion / Animaciones
+✔ SEO básico implementado
+✔ Optimización de imágenes con Next/Image
+✔ Estructura modular de componentes
+
+📁 Estructura del repositorio
+/app
+  /components       # Componentes UI reutilizables
+  /sections         # Secciones clave de la página
+  /contacto         # Formulario o sección de contacto
+/public
+  /assets           # Imágenes, logos, recursos estáticos
+/src
+  /context          # Contextos globales (ej: idioma si aplica)
+  /styles           # Estilos globales y configuración de Tailwind
+/README.md          # Documentación del proyecto
+/package.json       # Dependencias y scripts
+
+🎯 Objetivo del sitio
+
+El sitio de JLA Técnicos está diseñado para:
+
+✅ Presentar la empresa de manera profesional
+✅ Mostrar los servicios ofrecidos
+✅ Establecer confianza con visitantes
+✅ Facilitar el contacto y consulta con clientes
+✅ Tener una presencia web moderna y funcional
+
+🛠️ Funcionalidades principales
+📌 Diseño responsive
+
+El sitio se adapta perfectamente a dispositivos móviles, tablets y desktop.
+
+📌 Navegación fluida
+
+Menú claro con anclas entre secciones para fácil navegación en una sola página.
+
+📌 Secciones efectivas
+
+Hero principal
+
+Servicios destacados
+
+Valores y experiencia
+
+Formulario de contacto
+
+📌 Optimización básica SEO
+
+Con meta­tags, títulos descriptivos y contenido legible por buscadores.
+
+⚙️ Instalación
+
+Clona el repositorio:
+
+git clone https://github.com/francoluca35/web-site-jla.git
+
+
+Instala las dependencias:
+
+pnpm install
+# o npm install / yarn install
+
+
+Levanta el servidor de desarrollo:
+
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Abre en tu navegador:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+📦 Scripts disponibles
+Script	Descripción
+dev	Levanta el proyecto en modo desarrollo
+build	Genera la versión optimizada para producción
+start	Inicia la versión generada
+lint	Corre las reglas de linting
+🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Este sitio puede desplegarse fácilmente en:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+☑ Vercel (muy recomendado para Next.js)
+☑ Netlify
+☑ Otros hosts compatibles con Node/Next.js
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📐 Diseño y UX
 
-## Deploy on Vercel
+El sitio fue construido teniendo en mente:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✔ Claridad visual
+✔ Información organizada por secciones
+✔ CTA claros para convertir visitantes en consultas
+✔ Estética limpia y profesional
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🤝 Colaboración y mejoras
+
+Si querés proponer mejoras o colaborar:
+
+📩 Contacto del desarrollador
+🔗 GitHub: https://github.com/francoluca35
+
+📝 Licencia
+
+Este proyecto se distribuye bajo licencia MIT.
+Podés usarlo, adaptarlo o expandirlo en nuevos proyectos.
