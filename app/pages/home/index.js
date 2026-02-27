@@ -72,7 +72,7 @@ const Inicio = () => {
       {/* Hero */}
       <section
         id="inicio"
-        className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+        className="relative z-10 min-h-screen w-full flex items-center justify-center overflow-hidden"
       >
         <div className="sr-only">
           JLA Equipamientos Gastronómicos. Hornos industriales, panificadoras,
@@ -155,10 +155,10 @@ const Inicio = () => {
         </div>
       </section>
 
-      {/* Barra de números */}
+      {/* Barra de números: fondo negro en todo el ancho */}
       <section
         id="home-stats"
-        className="bg-stone-800 border-y border-stone-700/50 py-16 sm:py-20"
+        className="relative z-10 bg-stone-900 border-y border-stone-700/50 py-16 sm:py-20"
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 text-center">
