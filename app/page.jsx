@@ -5,7 +5,6 @@ import Inicio from "./pages/home";
 import Nosotros from "./pages/history";
 import Producto from "./pages/productos";
 import Stecnico from "./pages/Stecnico";
-import Clientes from "./pages/Clientes";
 import Contacto from "./pages/Contacto";
 import Footer from "./pages/Footer";
 import Head from "next/head";
@@ -42,7 +41,6 @@ export default function Home() {
           <Inicio />
           <Nosotros />
           <Producto />
-          <Clientes />
           <Stecnico />
           <Contacto />
           <ArrowUp />
