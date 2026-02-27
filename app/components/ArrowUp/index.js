@@ -6,16 +6,15 @@ export default function ArrowUp() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+    const footer = document.getElementById('site-footer');
+    if (!footer) return;
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1, rootMargin: '0px' }
+    );
+    observer.observe(footer);
+    return () => observer.disconnect();
   }, []);
 
   const scrollToTop = () => {
@@ -30,7 +29,7 @@ export default function ArrowUp() {
       {isVisible && (
         <button 
           onClick={scrollToTop} 
-          className="fixed z-50 bottom-0 right-0  mr-4 bg-green-500 p-3  shadow-lg hover:bg-gray-800 transition-all flex items-center justify-center"
+          className="fixed z-50 bottom-0 left-0 ml-4 bg-green-500 p-3 shadow-lg hover:bg-stone-800 transition-all flex items-center justify-center"
           style={{ width: '45px', height: '45px' }}
         >
           <FaArrowUp className="text-white text-lg" />

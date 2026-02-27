@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../pages/navbar";
 import Footer from "../pages/Footer";
 import ArrowUp from "../components/ArrowUp";
+import FloatWhatsApp from "../components/FloatWhatsApp";
 import ContactPageContent from "./ContactPageContent";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function ContactoPage() {
         <ContactPageContent />
       </main>
       <ArrowUp />
+      <FloatWhatsApp />
       <Footer />
     </div>
   );

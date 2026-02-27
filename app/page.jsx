@@ -1,6 +1,6 @@
 import Navbar from "./pages/navbar";
 import ArrowUp from "./components/ArrowUp";
-import FloatBars from "./components/FloatBars";
+import FloatWhatsApp from "./components/FloatWhatsApp";
 import Inicio from "./pages/home";
 import Nosotros from "./pages/history";
 import Producto from "./pages/productos";
@@ -46,7 +46,7 @@ export default function Home() {
           <Stecnico />
           <Contacto />
           <ArrowUp />
-          {/* <FloatBars /> */}
+          <FloatWhatsApp />
           <Footer />
         </div>
       </HomeParallaxLayer>
