@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Ragna";
+  src: url("/font/Ragna.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-ragna {
+  font-family: "Ragna", sans-serif;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/font/Nunito-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,4 +50,31 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
