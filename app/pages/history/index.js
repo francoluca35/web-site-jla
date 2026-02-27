@@ -1,53 +1,97 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+const EMPRESA_IMAGES = [
+  { src: "/assets/person1.jpg", alt: "Equipo JLA Equipamientos Gastronómicos" },
+  { src: "/assets/fondo1.png", alt: "Equipamiento gastronómico industrial" },
+  { src: "/assets/fondo2.jpg", alt: "Trabajo y maquinaria JLA" },
+];
 
 export default function Nosotros() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const t = setInterval(
+      () => setCurrentImage((p) => (p + 1) % EMPRESA_IMAGES.length),
+      4500
+    );
+    return () => clearInterval(t);
+  }, []);
+
+  const scrollToContacto = () => {
+    const el = document.getElementById("Contacto");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="bg-gray-100">
-      <section
-        id="Sobrenosotros"
-        className="flex flex-col md:flex-row items-center justify-between p-8 rounded-lg max-w-6xl mx-auto"
-      >
-        {/* Imagen a la izquierda en desktop */}
-        <div className="w-full md:w-1/2 hidden md:flex justify-center">
-          <Image
-            src="/assets/person1.jpg"
-            width={500}
-            height={500}
-            alt="Nosotros"
-            className="rounded-lg object-cover"
-          />
-        </div>
-        {/* Contenido a la derecha en desktop */}
-        <div className="w-full md:w-1/2 p-6 text-gray-800 flex flex-col justify-center">
-          <h2 className="font-bold text-green-500 text-4xl mb-4">Desde 2000</h2>
-          <h2 className="font-bold text-green-500 text-4xl mb-4">
-            Siempre Juntos
-          </h2>
-          <p className="text-lg font-semibold mb-2">
-            Han pasado más de 25 años. Hoy sentimos orgullo de haber ubicado a
-            JLA Técnicos entre las marcas líderes del mercado.
-          </p>
-          <p className="text-gray-600 mb-4">
-            Nos enfocamos en lograr que la tarea de los profesionales de la
-            panadería, pastelería, gastronomía, hotelería y food service sea lo
-            más cómoda y eficiente posible. Trabajamos juntos en la creación de
-            soluciones que los ayuden a elaborar los mejores productos para sus
-            clientes.
-          </p>
-          {/* Imagen en mobile entre el texto y el botón */}
-          <div className="w-full flex justify-center md:hidden mb-4">
-            <Image
-              src="/assets/1.png"
-              width={500}
-              height={500}
-              alt="Nosotros"
-              className="rounded-lg object-cover"
-            />
+    <section
+      id="Sobrenosotros"
+      className="relative overflow-hidden bg-stone-50 border-t border-stone-200 scroll-mt-24 min-h-screen flex items-center"
+    >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-1 py-16 sm:py-24 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Slider de 3 fotos */}
+          <div className="relative order-2 lg:order-1">
+            <div className="relative aspect-[4/3] overflow-hidden  shadow-lg ring-1 ring-stone-200/80">
+              {EMPRESA_IMAGES.map((img, i) => (
+                <div
+                  key={img.src}
+                  className="absolute inset-0 transition-opacity duration-700 ease-out"
+                  style={{ opacity: i === currentImage ? 1 : 0 }}
+                >
+                  <Image
+                    src={img.src}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    alt={img.alt}
+                    className="object-cover"
+                    priority={i === 0}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contenido */}
+          <div className="order-1 lg:order-2">
+            <p className="text-[#3b9738] font-semibold text-sm uppercase tracking-[0.2em] mb-3">
+              Nuestra empresa
+            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight mb-6">
+              Desde 2005, siempre juntos
+            </h2>
+            <p className="text-stone-600 text-lg leading-relaxed mb-4">
+              Más de 20 años ubicando a JLA Técnicos entre las marcas líderes del mercado
+              de equipamiento gastronómico industrial.
+            </p>
+            <p className="text-stone-500 leading-relaxed mb-8">
+              Nos enfocamos en que la tarea de los profesionales de panadería,
+              pastelería, gastronomía, hotelería y food service sea cómoda y
+              eficiente. Desarrollamos soluciones para que elaboren los mejores
+              productos para sus clientes.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 bg-[#3b9738] hover:bg-[#2d7429] text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Saber más sobre nosotros
+                <i className="fa fa-arrow-right text-sm" aria-hidden="true" />
+              </Link>
+              <button
+                type="button"
+                onClick={scrollToContacto}
+                className="inline-flex items-center gap-2 bg-transparent border-2 border-stone-400 hover:border-[#3b9738] text-stone-700 hover:text-[#3b9738] font-semibold px-6 py-3.5 rounded-xl transition-all duration-200"
+              >
+                Contactanos
+              </button>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
