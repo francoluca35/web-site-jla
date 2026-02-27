@@ -11,9 +11,32 @@ const SLIDES = [
 
 const SLIDE_3_MOBILE = { src: "/assets/tecnico.png", alt: "Soluciones para cocinas industriales" };
 
+const DURATION_MS = 2000;
+const useCountUp = (end, start = 0, isActive) => {
+  const [value, setValue] = useState(start);
+  useEffect(() => {
+    if (!isActive) return;
+    let startTime = null;
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / DURATION_MS, 1);
+      const easeOut = 1 - (1 - progress) ** 2;
+      setValue(Math.round(start + (end - start) * easeOut));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [end, start, isActive]);
+  return value;
+};
+
 const Inicio = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [statsInView, setStatsInView] = useState(false);
+  const count25 = useCountUp(25, 0, statsInView);
+  const count2000 = useCountUp(2000, 0, statsInView);
+  const count100 = useCountUp(100, 0, statsInView);
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 767px)");
@@ -26,6 +49,17 @@ const Inicio = () => {
   useEffect(() => {
     const t = setInterval(() => setCurrentSlide((p) => (p + 1) % SLIDES.length), 5000);
     return () => clearInterval(t);
+  }, []);
+
+  useEffect(() => {
+    const el = document.getElementById("home-stats");
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => setStatsInView(e.isIntersecting),
+      { threshold: 0.3 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
   }, []);
 
   const scrollTo = (id) => {
@@ -122,24 +156,42 @@ const Inicio = () => {
       </section>
 
       {/* Barra de números */}
-      <section className="bg-[#3b9738] text-white py-12">
+      <section
+        id="home-stats"
+        className="bg-stone-800 border-y border-stone-700/50 py-16 sm:py-20"
+      >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 text-center">
             <div>
-              <p className="text-4xl sm:text-5xl font-bold">+25</p>
-              <p className="text-white/90 text-sm sm:text-base mt-1 uppercase tracking-wider">
+              <p
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tabular-nums transition-all duration-300"
+                style={{ color: "#38fc1b", textShadow: "0 0 20px rgba(56, 252, 27, 0.4)" }}
+              >
+                +{count25}
+              </p>
+              <p className="text-stone-400 text-sm sm:text-base mt-2 tracking-wide">
                 Años en el mercado
               </p>
             </div>
             <div>
-              <p className="text-4xl sm:text-5xl font-bold">Desde</p>
-              <p className="text-white/90 text-sm sm:text-base mt-1 uppercase tracking-wider">
-                2000 con vos
+              <p
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tabular-nums transition-all duration-300"
+                style={{ color: "#38fc1b", textShadow: "0 0 20px rgba(56, 252, 27, 0.4)" }}
+              >
+                {count2000}
+              </p>
+              <p className="text-stone-400 text-sm sm:text-base mt-2 tracking-wide">
+                Desde 2000 con vos
               </p>
             </div>
             <div className="col-span-2 lg:col-span-1">
-              <p className="text-4xl sm:text-5xl font-bold">100%</p>
-              <p className="text-white/90 text-sm sm:text-base mt-1 uppercase tracking-wider">
+              <p
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tabular-nums transition-all duration-300"
+                style={{ color: "#38fc1b", textShadow: "0 0 20px rgba(56, 252, 27, 0.4)" }}
+              >
+                {count100}%
+              </p>
+              <p className="text-stone-400 text-sm sm:text-base mt-2 tracking-wide">
                 Compromiso con la calidad
               </p>
             </div>
