@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12 relative">
+    <footer className="relative z-10 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-12">
       <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start px-8">
         {/* Contacto */}
         <div className="w-full lg:w-1/3 text-center lg:text-left mb-6 lg:mb-0">

@@ -29,7 +29,7 @@ export default function Nosotros() {
   return (
     <section
       id="Sobrenosotros"
-      className="relative overflow-hidden bg-stone-50 border-t border-stone-200 scroll-mt-24 min-h-screen flex items-center"
+      className="relative z-10 overflow-hidden bg-stone-50 border-t border-stone-200 scroll-mt-24 min-h-screen flex items-center"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-1 py-16 sm:py-24 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">

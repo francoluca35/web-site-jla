@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Navbar from "./pages/navbar";
 import ArrowUp from "./components/ArrowUp";
 import FloatBars from "./components/FloatBars";
@@ -10,6 +9,7 @@ import Clientes from "./pages/Clientes";
 import Contacto from "./pages/Contacto";
 import Footer from "./pages/Footer";
 import Head from "next/head";
+import HomeParallaxLayer from "./components/HomeParallaxLayer";
 
 export default function Home() {
   return (
@@ -36,18 +36,20 @@ export default function Home() {
         />
         <meta property="og:url" content="https://jlatecnicos.com" />
       </Head>
-      <div>
-        <Navbar />
-        <Inicio />
-        <Nosotros />
-        <Producto />
-        <Clientes />
-        <Stecnico />
-        <Contacto />
-        <ArrowUp />
-        {/* <FloatBars /> */}
-        <Footer />
-      </div>
+      <HomeParallaxLayer>
+        <div>
+          <Navbar />
+          <Inicio />
+          <Nosotros />
+          <Producto />
+          <Clientes />
+          <Stecnico />
+          <Contacto />
+          <ArrowUp />
+          {/* <FloatBars /> */}
+          <Footer />
+        </div>
+      </HomeParallaxLayer>
     </>
   );
 }
