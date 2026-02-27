@@ -45,7 +45,7 @@ export default function Home() {
         <Stecnico />
         <Contacto />
         <ArrowUp />
-        <FloatBars />
+        {/* <FloatBars /> */}
         <Footer />
       </div>
     </>

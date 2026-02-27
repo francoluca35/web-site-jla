@@ -27,7 +27,7 @@ export default function Nosotros() {
           </h2>
           <p className="text-lg font-semibold mb-2">
             Han pasado más de 25 años. Hoy sentimos orgullo de haber ubicado a
-            Pauna entre las marcas líderes del mercado.
+            JLA Técnicos entre las marcas líderes del mercado.
           </p>
           <p className="text-gray-600 mb-4">
             Nos enfocamos en lograr que la tarea de los profesionales de la

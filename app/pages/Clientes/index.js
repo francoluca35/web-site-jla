@@ -15,7 +15,7 @@ const logos = [
 
 export default function Clientes() {
   return (
-    <div>
+    <div id="Clientes" className="scroll-mt-36">
       <h2 className="uppercase bg-[#FFF6DA] py-2 text-center text-xl sm:text-2xl md:text-3xl font-semibold text-green-600">
         Algunos de nuestros clientes
       </h2>

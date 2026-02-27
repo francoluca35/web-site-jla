@@ -1,84 +1,152 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
-import "../../../globals.css";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Image from "next/image";
 
-const images = [
-  "/assets/fondo1.jpg",
-  "/assets/fondo2.jpg",
-  "/assets/fondo3.jpeg",
+const SLIDES = [
+  { src: "/assets/fondo1.png", alt: "Equipamiento gastronómico industrial" },
+  { src: "/assets/fondo2.jpg", alt: "Hornos y maquinaria para panificación" },
+  { src: "/assets/fondo3.jpeg", alt: "Soluciones para cocinas industriales" },
 ];
 
-const Inicio = () => {
-  const [text] = useTypewriter({
-    words: [
-      "JLA EQUIPAMIENTOS GASTRONOMICOS",
-      "Potencia tu cocina con tecnología de Calidad.",
-      "Soluciones gastronómicas que marcan la diferencia.",
-      "Hacemos que tu cocina trabaje por ti.",
-    ],
-    loop: true,
-    delaySpeed: 3000,
-  });
+const SLIDE_3_MOBILE = { src: "/assets/tecnico.png", alt: "Soluciones para cocinas industriales" };
 
-  const [currentImage, setCurrentImage] = useState(0);
+const Inicio = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 4000); // Cambia cada 4 segundos
-
-    return () => clearInterval(interval);
+    const mq = window.matchMedia("(max-width: 767px)");
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
   }, []);
 
+  useEffect(() => {
+    const t = setInterval(() => setCurrentSlide((p) => (p + 1) % SLIDES.length), 5000);
+    return () => clearInterval(t);
+  }, []);
+
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div
-      id="inicio"
-      className="relative w-full h-screen flex items-center justify-center text-white overflow-hidden"
-    >
-      <div className="sr-only">
-        JLA Equipamientos Gastronómicos, hornos industriales, panificadoras
-        industriales, cocinas industriales, mantenimiento de hornos, repuestos
-        para hornos gastronómicos, servicio técnico de gastronomía, soluciones
-        para panaderías y restaurantes industriales, tecnología gastronómica
-        profesional.
-      </div>
-      <h2 className="sr-only">
-        Venta y reparación de hornos industriales y panificadoras
-      </h2>
+    <>
+      {/* Hero */}
+      <section
+        id="inicio"
+        className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+      >
+        <div className="sr-only">
+          JLA Equipamientos Gastronómicos. Hornos industriales, panificadoras,
+          cocinas industriales, mantenimiento y servicio técnico para
+          panaderías, pastelerías y comida rápida.
+        </div>
 
-      <div className="absolute top-0 left-0 w-full h-full">
-        {images.map((src, index) => (
-          <Image
-            key={index}
-            src={src}
-            alt={`Slide ${index + 1}`}
-            layout="fill"
-            objectFit="cover"
-            className={`absolute transition-opacity duration-1000 ${
-              index === currentImage ? "opacity-100" : "opacity-0"
-            }`}
-          />
-        ))}
-      </div>
+        {/* Slider de fondo: en mobile el 3º slide usa tecnico.png */}
+        <div className="absolute inset-0">
+          {SLIDES.map((slide, i) => {
+            const useSlide = i === 2 && isMobile ? SLIDE_3_MOBILE : slide;
+            return (
+              <div
+                key={`${useSlide.src}-${i}`}
+                className="absolute inset-0 transition-opacity duration-1000 ease-out"
+                style={{ opacity: i === currentSlide ? 1 : 0 }}
+              >
+                <Image
+                  src={useSlide.src}
+                  alt={useSlide.alt}
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                  priority={i === 0}
+                />
+              </div>
+            );
+          })}
+        </div>
 
-      {/* Contenido alineado a la izquierda en desktop, centrado en mobile */}
-      <div className="main-content z-10 text-left md:text-center xl:text-left sm:text-center">
-        <h1 className="text-4xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
-          {text}
-          <Cursor cursorStyle="|" />
-        </h1>
-        <p className="text-lg lg:text-xl mb-6 drop-shadow-lg xl:text-left xl:w-[820px] md:w-full md:text-center sm:text-center sm:w-full">
-          Acompañamos a los profesionales, comercios e industrias a cumplir sus
-          objetivos con éxito, desde sus inicios y durante todo el desarrollo de
-          su negocio.
-        </p>
-      </div>
+        {/* Overlay */}
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-stone-900/50"
+          aria-hidden="true"
+        />
 
-      {/* Filtro oscuro para mejorar el contraste */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40"></div>
-    </div>
+        {/* Contenido - en mobile más abajo; espacio bajo el navbar */}
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-3 sm:px-5 lg:px-7 pt-60 sm:pt-52 lg:pt-56 pb-20">
+          <div className="max-w-2xl">
+            <p className="text-[#3b9738] font-semibold text-sm uppercase tracking-[0.2em] mb-4 animate-fade-in">
+              Equipamiento gastronómico profesional
+            </p>
+            <h1 className="uppercase text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+            Tecnología profesional para la gastronomía que crece
+            </h1>
+            <p className="font-nunito text-lg sm:text-xl text-stone-200/95 leading-relaxed mb-10 max-w-xl">
+              Acompañamos a profesionales, comercios e industrias desde el inicio
+              y durante todo el desarrollo de su negocio.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button
+                onClick={() => scrollTo("productos")}
+                className="inline-flex items-center gap-2 bg-[#3b9738] hover:bg-[#2d7429] text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                Ver productos
+                <i className="fa fa-arrow-right text-sm" aria-hidden="true" />
+              </button>
+              <button
+                onClick={() => scrollTo("Contacto")}
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3.5 rounded-xl border border-white/30 backdrop-blur-sm transition-all duration-200"
+              >
+                Contacto
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Indicadores del slider */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+          {SLIDES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentSlide(i)}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === currentSlide ? "w-8 bg-[#3b9738]" : "w-1.5 bg-white/50 hover:bg-white/70"
+              }`}
+              aria-label={`Ir a slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Barra de números */}
+      <section className="bg-[#3b9738] text-white py-12">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+            <div>
+              <p className="text-4xl sm:text-5xl font-bold">+25</p>
+              <p className="text-white/90 text-sm sm:text-base mt-1 uppercase tracking-wider">
+                Años en el mercado
+              </p>
+            </div>
+            <div>
+              <p className="text-4xl sm:text-5xl font-bold">Desde</p>
+              <p className="text-white/90 text-sm sm:text-base mt-1 uppercase tracking-wider">
+                2000 con vos
+              </p>
+            </div>
+            <div className="col-span-2 lg:col-span-1">
+              <p className="text-4xl sm:text-5xl font-bold">100%</p>
+              <p className="text-white/90 text-sm sm:text-base mt-1 uppercase tracking-wider">
+                Compromiso con la calidad
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
